@@ -16,6 +16,18 @@ export default function Cadastro(){
            </animatable.View>
 
            <animatable.View animation="fadeInUp" delay={10} style={styles.containerForm}>
+            
+           <Text style={styles.title}>Primeiro Nome</Text>
+            <TextInput 
+            placeholder="Digite seu Nome"
+            style={styles.input}
+            />
+            <Text style={styles.title}>Sobrenome</Text>
+            <TextInput 
+            placeholder="Sobrenome"
+            style={styles.input}
+            />
+
             <Text style={styles.title}>Email</Text>
             <TextInput 
             placeholder="Digite Seu Email"
@@ -32,7 +44,11 @@ export default function Cadastro(){
             style={styles.input}
             />
 
-            <TouchableOpacity style={styles.button}> 
+            
+
+            <TouchableOpacity style={styles.button}
+            onPress={ () => navigation.navigate('Home')}
+            > 
                 <Text style={styles.buttonText} >Acessar</Text>
             </TouchableOpacity>
 

@@ -6,6 +6,7 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-nativ
 import * as animatable from 'react-native-animatable'
 import{ useNavigation } from '@react-navigation/native'
 
+
 export default function Login(){
     const navigation = useNavigation();
     return(
@@ -27,9 +28,13 @@ export default function Login(){
             style={styles.input}
             />
 
-            <TouchableOpacity style={styles.button}> 
+            <TouchableOpacity style={styles.button}
+            onPress={ () => navigation.navigate('Home')}
+            > 
                 <Text style={styles.buttonText} >Acessar</Text>
             </TouchableOpacity>
+            
+
 
             <TouchableOpacity style={styles.buttonRegister}
             onPress={ () => navigation.navigate('Cadastro')}
